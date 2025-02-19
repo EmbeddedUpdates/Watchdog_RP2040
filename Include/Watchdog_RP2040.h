@@ -13,7 +13,8 @@
   Revision |  Author   |  Change ID  |  Description
   00.00.00 |  AUTHOR   |  DRAFT      |  Initial Creation
 ************************************************************/
-
+#ifndef WATCHDOG_RP2040_H
+#define WATCHDOG_RP2040_H
 /************************************************************
   DEFINES
 ************************************************************/
@@ -29,3 +30,8 @@ typedef enum Watchdog_RP2040_Status_Tag {
 /************************************************************
   INCLUDES
 ************************************************************/
+#include "Watchdog_RP2040_SFR.h"
+
+extern void Watchdog_RP2040_Init( void );
+extern void Watchdog_RP2040_Enable( void );
+#endif /* WATCHDOG_RP2040_H*/
